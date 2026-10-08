@@ -36,6 +36,12 @@
       "ctrl-d": ["workspace::SendKeystrokes", "ctrl-shift-d z z"],
     },
   },
+  {
+      "context": "Editor && !menu",
+      "bindings": {
+        "ctrl-v": "editor::Paste"
+      }
+  },
   // Worksapce panels
   {
     "context": "Workspace",
