@@ -21,12 +21,13 @@
 -- o.bind("SUPER + SPACE", "Omarchy menu", "omarchy-menu toggle root")
 
 -- Disable a default binding without replacing it.
--- hl.unbind("SUPER + SHIFT + B")
+hl.unbind("SUPER + SHIFT + S") -- Disable default keybinding for maps
+o.bind("SUPER + SHIFT + S", nil, "omarchy-capture-screenshot") --- assign it for screenshot
 
 -- Logitech MX Keys examples:
--- o.bind("SUPER + SHIFT + S", nil, "omarchy-capture-screenshot")
 -- o.bind("SUPER + H", nil, "voxtype record toggle")
 -- o.bind("SUPER + PERIOD", nil, "omarchy-shell shell toggle omarchy.emojis")
+
 -- strata-installer: file-manager start
 hl.unbind("SUPER + SHIFT + F")
 hl.unbind("SUPER + ALT + SHIFT + F")
