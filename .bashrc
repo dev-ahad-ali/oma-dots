@@ -49,6 +49,7 @@ HISTCONTROL=ignoreboth:erasedups
 bind 'set completion-ignore-case on'
 bind 'set show-all-if-ambiguous on'
 
+bind '"\C-h": backward-kill-word'
 
 # ============================================================
 # pnpm
