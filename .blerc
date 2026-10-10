@@ -1,0 +1,2 @@
+# Subtle autosuggestion text: muted gray, no background
+ble-color-setface auto_complete fg=240,underline
