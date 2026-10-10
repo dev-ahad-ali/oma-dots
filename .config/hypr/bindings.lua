@@ -36,7 +36,12 @@ o.bind("SUPER + ALT + SHIFT + F", "File manager (cwd)",
   "uwsm-app -- /home/dev-ahad-ali/.local/bin/strata \"$(omarchy-cmd-terminal-cwd)\"")
 -- strata-installer: file-manager end
 
+-- keybinding to launch zed code editor
+hl.bind("SUPER + Z", function()
+  hl.exec_cmd("zeditor")
+end, { description = "Launch Zed editor" })
 
+-- custom keybinding for setting different maximizing methods in different layouts
 hl.unbind("SUPER + ALT + F")
 
 hl.bind("SUPER + ALT + F", function()
