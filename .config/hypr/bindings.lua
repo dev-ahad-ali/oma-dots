@@ -35,3 +35,22 @@ o.bind("SUPER + SHIFT + F", "File manager", { launch = "/home/dev-ahad-ali/.loca
 o.bind("SUPER + ALT + SHIFT + F", "File manager (cwd)",
   "uwsm-app -- /home/dev-ahad-ali/.local/bin/strata \"$(omarchy-cmd-terminal-cwd)\"")
 -- strata-installer: file-manager end
+
+
+hl.unbind("SUPER + ALT + F")
+
+hl.bind("SUPER + ALT + F", function()
+  local workspace = hl.get_active_workspace()
+
+  if workspace.tiled_layout == "scrolling" then
+    local window = hl.get_active_window()
+
+    if window.size.x >= 1800 then
+      hl.dispatch(hl.dsp.layout("colresize 0.5"))
+    else
+      hl.dispatch(hl.dsp.layout("colresize 1.0"))
+    end
+  else
+    hl.dispatch(hl.dsp.window.fullscreen({ mode = "maximized" }))
+  end
+end, { description = "Toggle full-width column" })
