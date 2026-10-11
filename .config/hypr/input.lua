@@ -43,6 +43,9 @@ hl.config({
       -- drag_3fg = 1,
     },
   },
+  gestures = {
+      workspace_swipe_use_r = true,
+    },
 })
 
 -- App-specific touchpad scroll speeds.
