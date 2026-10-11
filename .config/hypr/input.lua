@@ -60,3 +60,10 @@ hl.gesture({ fingers = 4, direction = "horizontal", action = "workspace" })
     -- inverse
 hl.gesture({ fingers = 3, direction = "right", action = function() hl.dispatch(hl.dsp.focus({ direction = "l" })) end })
 hl.gesture({ fingers = 3, direction = "left", action = function() hl.dispatch(hl.dsp.focus({ direction = "r" })) end })
+
+-- moving focus with scrolling effect for scrolling layout
+-- hl.gesture({
+--   fingers = 3,
+--   direction = "horizontal",
+--   action = "scroll_move",
+-- })
