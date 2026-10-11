@@ -59,3 +59,17 @@ hl.bind("SUPER + ALT + F", function()
     hl.dispatch(hl.dsp.window.fullscreen({ mode = "maximized" }))
   end
 end, { description = "Toggle full-width column" })
+
+
+-- super + f9 to toggle voxtype
+hl.bind("SUPER + F9", function()
+  hl.exec_cmd([[bash -c '
+    if systemctl --user is-active --quiet voxtype; then
+      systemctl --user stop voxtype &&
+        notify-send "Voxtype" "Dictation stopped"
+    else
+      systemctl --user start voxtype &&
+        notify-send "Voxtype" "Dictation started"
+    fi
+  ']])
+end, { description = "Toggle Voxtype" })
