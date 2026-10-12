@@ -24,6 +24,11 @@
 hl.unbind("SUPER + SHIFT + S") -- Disable default keybinding for maps
 o.bind("SUPER + SHIFT + S", nil, "omarchy-capture-screenshot") --- assign it for screenshot
 
+hl.unbind("SUPER + SHIFT + B") -- Disable default secondary keybinding for browser
+hl.bind("SUPER + SHIFT + B", function() -- assign it for firefox
+  hl.exec_cmd("firefox")
+end, { description = "Launch Firefox" })
+
 -- Logitech MX Keys examples:
 -- o.bind("SUPER + H", nil, "voxtype record toggle")
 -- o.bind("SUPER + PERIOD", nil, "omarchy-shell shell toggle omarchy.emojis")
