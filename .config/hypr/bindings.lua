@@ -78,3 +78,14 @@ hl.bind("SUPER + F9", function()
     fi
   ']])
 end, { description = "Toggle Voxtype" })
+
+
+-- media play pause
+hl.bind("SUPER + CTRL + M", function()
+  hl.exec_cmd("omarchy-shell media playPause")
+end, { description = "Toggle media playback" })
+
+-- microphone mute toggle
+hl.bind("SUPER + ALT + M", function()
+  hl.exec_cmd([[bash -lc "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle; if wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -q MUTED; then omarchy-shell osd show '{\"icon\":\"microphone-muted\",\"message\":\"Microphone muted\"}'; else omarchy-shell osd show '{\"icon\":\"microphone\",\"message\":\"Microphone on\"}'; fi"]])
+end, { description = "Toggle microphone mute" })
