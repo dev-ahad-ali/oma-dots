@@ -89,3 +89,16 @@ end, { description = "Toggle media playback" })
 hl.bind("SUPER + ALT + M", function()
   hl.exec_cmd([[bash -lc "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle; if wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -q MUTED; then omarchy-shell osd show '{\"icon\":\"microphone-muted\",\"message\":\"Microphone muted\"}'; else omarchy-shell osd show '{\"icon\":\"microphone\",\"message\":\"Microphone on\"}'; fi"]])
 end, { description = "Toggle microphone mute" })
+
+-- clipboard plus plugin
+hl.unbind("SUPER + CTRL + V")
+o.bind(
+  "SUPER + CTRL + V",
+  "Clipboard Plus",
+  "omarchy-shell shell toggle io.github.idr4n.clipboard-plus"
+)
+o.bind(
+  "SUPER + CTRL + SHIFT + V",
+  "Clipboard",
+  "omarchy-shell shell toggle omarchy.clipboard"
+)
